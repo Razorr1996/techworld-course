@@ -12,6 +12,15 @@ func main() {
 	taskItems := []string{shortGolang, fullGolang, rewardDessert}
 
 	fmt.Println("##### Welcome to our Todolist App! #####")
+
+	fmt.Println()
+	printTasks(taskItems)
+
+	taskItems = addTask(taskItems, "Go for a run")
+	taskItems = addTask(taskItems, "Practice coding in Go")
+
+	fmt.Println()
+	fmt.Println("Updated list")
 	printTasks(taskItems)
 }
 
@@ -20,4 +29,9 @@ func printTasks(taskItems []string) {
 	for index, task := range taskItems {
 		fmt.Printf("%d: %s\n", index+1, task)
 	}
+}
+
+func addTask(taskItems []string, newTask string) []string {
+	var updatedTaskItems = append(taskItems, newTask)
+	return updatedTaskItems
 }
