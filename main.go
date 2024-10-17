@@ -5,14 +5,14 @@ import (
 )
 
 func main() {
-	shostGolang := "Watch Go crash course"
+	shortGolang := "Watch Go crash course"
 	fullGolang := "Watch Nana's Golang Full Course"
 	rewardDessert := "Reward myself with rewardDessert donut"
+
+	taskItems := []string{shortGolang, fullGolang, rewardDessert}
 
 	fmt.Println("##### Welcome to our Todolist App! #####")
 
 	fmt.Println("List of my Todos")
-	fmt.Println(shostGolang)
-	fmt.Println(fullGolang)
-	fmt.Println(rewardDessert)
+	fmt.Println("Tasks:", taskItems)
 }
